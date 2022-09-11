@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="http://fonts.cdnfonts.com/css/architects-draft" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
+    <link rel="stylesheet" href="/css/googleTranslate.css">
+    <link rel="stylesheet" href="/css/descriptionpage.css">
+    <title>Description page</title>
+</head>
+<body>
+    
+    <div id='google_translate_element'></div>      
+
+    <div class="image_container">
+        <span class="category_link">
+            <a href="/">Design </a>>
+            <a href="">Exterior </a>>
+            <a href="">Residential</a>
+        </span>
+        
+        <!--  -->
+        <a href="/" class="arrow_back"><img src="/icons/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt="arrow_back"></a><a href="/" class="b_homepage_link"> Back to Home Page</a>
+        <!--  -->
+        
+        <img alt="project image" class="image" src="http://localhost:4000/images/Uploads/<%=project.mainCategory%>/<%=project.subCategory %>/<%=project.subSubCategory%>/<%=project.path[0]%>">
+        <!-- <img alt="project image" class="image" src="/images/Design/Exterior/Residential/F1.PP.jpg"> -->
+    </div>
+    <div class="desc_container">
+        <!--  -->
+        <a href="/" class="arrow_back"><img src="/icons/arrow_back_FILL0_wght400_GRAD0_opsz48 white.svg" alt="arrow_back"></a><a href="/" class="b_homepage_link"> Back to Home Page</a>
+        <!--  -->
+        <ul class="description_list">
+            <li id="title"><h1><u>Project description</u></h1></li>
+            <li>Project name: <%= project.name %></li>
+            <li>Project area: <%= project.area %></li>
+            <li>Project location: <%=project.location %></li>
+            <li>Project cost: <%=project.cost %></li>
+        </ul>
+        
+
+        <!-- <% if(project.path.length == 2) { %>
+            <div class="more_images">
+                <div class="image_box"><img alt="project images" src="http://localhost:4000/images/Uploads/<%=project.mainCategory%>/<%=project.subCategory %>/<%=project.subSubCategory%>/<%=project.path[1]%>"></div>
+                <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff1.jpg"></div>
+            </div>
+        <% } else if(project.path.length > 2) { %>
+            <div class="more_images">
+                <% for( let i = 1, n =  project.path.length; i < n; i++ ) { %>
+                    <div class="image_box"><img alt="project images" src="http://localhost:4000//images/Uploads/<%=project.mainCategory%>/<%=project.subCategory %>/<%=project.subSubCategory%>/<%=project.path[i]%>"></div>
+                    <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff1.jpg"></div>
+                <% } %>
+            </div>
+        <% } %> -->
+        <div class="more_images">
+            <div class="image_box"><img alt="project images" src="<%= (project.path.length > 1)? 'http://localhost:4000/images/Uploads/' + project.mainCategory + '/' + project.subCategory + '/' + project.subSubCategory + '/' + project.path[1] : '' %>"></div>
+            <div class="image_box"><img alt="project images" src="<%= (project.path.length > 2)? 'http://localhost:4000/images/Uploads/' + project.mainCategory + '/' + project.subCategory + '/' + project.subSubCategory + '/' + project.path[2] : '' %>"></div>
+            <div class="image_box"><img alt="project images" src="<%= (project.path.length > 3)? 'http://localhost:4000/images/Uploads/' + project.mainCategory + '/' + project.subCategory + '/' + project.subSubCategory + '/' + project.path[3] : '' %>"></div>
+            <div class="image_box"><img alt="project images" src="<%= (project.path.length > 4)? 'http://localhost:4000/images/Uploads/' + project.mainCategory + '/' + project.subCategory + '/' + project.subSubCategory + '/' + project.path[4] : '' %>"></div>
+            <!-- <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff1.jpg"></div>
+            <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff10.jpg"></div>
+            <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff5.jpg"></div>
+            <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff7.jpg"></div> -->
+            <!-- <div class="image_box"><img alt="project images" src=""></div>
+            <div class="image_box"><img alt="project images" src=""></div> -->
+        </div> 
+        </div>
+    </div>
+
+    <!-- google translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,am',
+            autoDisplay: false,
+            multilanguagePage: true, layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/js/languageChange.js"></script>
+</body>
+</html>

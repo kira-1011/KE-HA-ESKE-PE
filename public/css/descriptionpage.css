@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+html
+{
+    height: 100%;
+}
+
+/* make the body flex */
+body
+{
+    background-color: black;
+    color: white;
+    font-family: 'Architects Daughter';
+    font-weight:bold;
+    height: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    /* overflow: hidden; */
+    
+}
+
+/* make the image div responsive by specifying max width*/
+.image_container
+{
+    position: relative;
+    max-width: 60%;
+    height: 100%;
+}
+
+.image_container .category_link
+{
+    color: black;
+    position: absolute;
+    top: 5px;
+    left: 16px;
+}
+
+/*  */
+.image_container .b_homepage_link
+{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    /* background-color: red; */
+}
+
+.arrow_back
+{
+    position: absolute;
+    top: 4px;
+    right: 144px;
+}
+
+.image_container .arrow_back
+{ 
+    display: none;
+}
+
+.arrow_back img
+{
+    width: 50%;
+    height: auto;
+    /* background-color: blue; */
+}
+
+/*  */
+
+.image_container a
+{
+    color: black;
+    /* font-size: 1.5em; */
+    text-decoration: none;
+}
+
+
+.image
+{
+    width: 100%;
+    height: 100%;
+}
+
+/* make the description container flex to layout the list and the other images*/
+.desc_container
+{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 40%;
+}
+
+.desc_container .b_homepage_link
+{
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    /* background-color: red; */
+}
+
+.desc_container a
+{
+    color: white;
+    /* font-size: 1.5em; */
+    text-decoration: none;
+}
+
+.description_list
+{
+    list-style: none;
+    width: 100%;
+    margin: 0em;
+    /* background-color: aqua; */
+}
+
+.description_list #title
+{
+    /* margin-top: 0.2em; */
+    margin-top: 0em;
+
+}
+
+/* make list more readable */
+.desc_container ul li
+{
+    font-size: x-large;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.more_images
+{
+    display: flex; 
+    flex-wrap: wrap;  
+    justify-content: center;
+    gap: 1em;
+    /* background-color: white; */
+    margin-top: 2.4em;
+    padding: 1em;
+    /* height: 40%; */
+}
+
+/* set size for side images and make them responsive  */
+.more_images .image_box
+{
+    max-width: 48.9%;
+    height: 16.875em;
+    /* height: 15em; */
+    
+    /* >=7 */
+    /* flex: 1 1 calc(23%); */
+    
+    /* 6 */
+    /* flex: 1 1 calc(30%); */
+    
+    /* <= 4 */
+    flex: 1 1 calc(40%);
+}
+
+
+.more_images .image_box img
+{
+    width: 100%;
+    height: 100%;
+}
+
+/* hide the images with no src */
+.more_images .image_box img[src=""]
+{
+    display: none;
+}
+
+
+/* for smaller devices (mobile tablets) decrease the font and make the image fill the whole width */
+
+/* when the width becomes smaller (1200px) make the font small */
+@media screen and (max-width: 1630px) and (min-width: 1287px)
+{
+    .desc_container ul li
+    {
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 1286px) and (min-width: 1025px)
+{
+    .desc_container ul li
+    {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    
+    .image_container
+    {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .image_container .b_homepage_link, .image_container .arrow_back
+    {
+        display: inline;
+    }
+
+    .desc_container ul li
+    {
+        font-size: small;
+    }
+
+    .description_list #title
+    {
+        margin-top: 0.5em;
+    }
+
+    .desc_container
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .desc_container .b_homepage_link, .desc_container .arrow_back
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px)
+{   
+    .category_link, .b_homepage_link
+    {
+        font-size: smaller;
+    }
+
+    .arrow_back
+    {
+        right: 115px;
+    }
+
+    .arrow_back img
+    {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 414px)
+{
+    .desc_container ul li, .category_link, .b_homepage_link
+    {
+        font-size: xx-small;
+    }
+
+    .more_images .image_box
+    {
+        height: 8em;
+    }
+
+    .arrow_back
+    {
+        top: 2px;
+        right: 70px;
+    }
+
+    .arrow_back img
+    {
+        width: 30%;
+    }
+}

@@ -4,7 +4,7 @@ const Project = require("./models/Project");
 const app = express();
 const cors = require('cors');
 
-let PORT = 3000 | process.env.PORT;
+let PORT = process.env.PORT || 3000;
 
 app.use(cors());
 

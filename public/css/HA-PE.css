@@ -357,7 +357,7 @@ body{
     #exterior, #interior{
         letter-spacing: 0.25em;
         text-decoration: none;
-        font-size: 1.15em;
+        font-size: small;
         margin-left: 2em;
         font-weight: 600;
         /* font-style: italic; */
@@ -368,8 +368,8 @@ body{
     }
     
     #exteriorSubList, #interiorSubList{
-        font-size: small;
-        margin-left: 2.8em;
+        font-size: x-small;
+        margin-left: 3.5em;
     }
     
     #designSubList{

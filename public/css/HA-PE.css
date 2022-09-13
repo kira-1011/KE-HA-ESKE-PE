@@ -95,7 +95,7 @@ body{
         height: 0em;
     }
     80%{
-        height: 3.8em;
+        height: 4.3em;
     }
     100%{
         height: fit-content;
@@ -104,7 +104,7 @@ body{
 
 @keyframes designListHide1 {
     0%{
-        height: 3.8em;
+        height: 4.3em;
     }
     
     100%{
@@ -238,8 +238,11 @@ body{
     width: 1.85em;
 }
 
+.leftContactIcons{
+    margin-right: 2em;
+}
+
 #phone{
-    margin-right: 2em; 
     height: 1.2em; 
     width: 1.2em;
 }
@@ -356,14 +359,17 @@ body{
         text-decoration: none;
         font-size: 1.15em;
         margin-left: 2em;
+        font-weight: 600;
+        font-style: italic;
     }
     #interior{
+        margin-top: 0.2em;
         margin-left: 2.5em;
     }
     
     #exteriorSubList, #interiorSubList{
-        font-size: 1.15em;
-        margin-left: 1.5em;
+        font-size: 1em;
+        margin-left: 2.8em;
     }
     
     #designSubList{
@@ -385,14 +391,13 @@ body{
     }
 
     #contactSubList img{
-        height: 1.5em;
-        width: 1.5em;
+        height: 1.4em;
+        width: 1.4em;
     }
 
     #phone{
-        margin-right: 2em; 
-        height: 1.22em; 
-        width: 1.22em;
+        height: 1.2em; 
+        width: 1.2em;
     }
 }
 
@@ -426,7 +431,7 @@ body{
         height: fit-content;
         margin: 0.5em 0.5em 0 0;
         padding: 0;
-        font-size: medium;
+        font-size: large;
         z-index: 99;
     }
     .subList{
@@ -439,26 +444,29 @@ body{
         padding: 0;
         margin: 0;
         list-style: none;
-        font-size: medium;
+        font-size: large;
     }
 
     #exterior, #interior{
         letter-spacing: 0.2em;
         text-decoration: none;
-        font-size: medium;
-        margin-left: 2em;
+        font-size: large;
+        margin-left: 3em;
+        font-weight: 600;
+        font-style: italic;
     }
     #interior{
-        margin-left: 2.5em;
+        margin-top: 0.4em;
+        margin-left: 3.2em;
     }
     
     #exteriorSubList, #interiorSubList{
-        font-size: small;
-        margin-left: 1em;
+        font-size: large;
+        margin-left: 2em;
     }
     
     #designSubList{
-        font-size: medium;
+        font-size: large;
     }
 
     .subList > li{
@@ -472,29 +480,21 @@ body{
         display: flex;
         justify-content: center;
         top: 70%;
-        font-size: medium;
+        font-size: large;
     }
-
-    /* #contactSubList img{
-        height: 1em;
-        width: 1em;
-    }
-
-    #phone{
-        margin-right: 1em; 
-        height: 1.4em; 
-        width: 1.4em;
-    } */
 
     #contactSubList img{
-        height: 1.85em;
-        width: 1.85em;
+        height: 1.8em;
+        width: 1.8em;
+    }
+
+    .leftContactIcons{
+        margin-right: 2.5em;
     }
 
     #phone{
-        margin-right: 2em; 
-        height: 1.2em; 
-        width: 1.2em;
+        height: 1em; 
+        width: 1em;
     }
 
 }

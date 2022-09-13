@@ -24,9 +24,13 @@
 
     <div class="image_container">
         <span class="category_link">
-            <a href="/">Design </a>>
-            <a href="">Exterior </a>>
-            <a href="">Residential</a>
+            <% if(project.mainCategory == "build") { %>
+                <a href = "/" style=" display: inline; text-transform: capitalize;"><%= project.mainCategory%> </a>
+            <% } else { %>
+                <a href="/" style=" display: inline; text-transform: capitalize;"><%= project.mainCategory%> </a> > 
+                <a href="/<%=project.mainCategory %>/<%=project.subCategory%>/<%=project.subSubCategory%>" style=" display: inline; text-transform: capitalize;"><%= project.subCategory %> </a>>
+                <a href="" style=" display: inline; text-transform: capitalize;"><%= project.subSubCategory%></a>
+            <% } %>
         </span>
         
         <!--  -->

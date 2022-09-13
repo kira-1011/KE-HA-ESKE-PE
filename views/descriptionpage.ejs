@@ -48,33 +48,13 @@
             <li>Project cost: <%=project.cost %></li>
         </ul>
         
-
-        <!-- <% if(project.path.length == 2) { %>
-            <div class="more_images">
-                <div class="image_box"><img alt="project images" src="https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=project.mainCategory%>/<%=project.subCategory %>/<%=project.subSubCategory%>/<%=project.path[1]%>"></div>
-                <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff1.jpg"></div>
-            </div>
-        <% } else if(project.path.length > 2) { %>
-            <div class="more_images">
-                <% for( let i = 1, n =  project.path.length; i < n; i++ ) { %>
-                    <div class="image_box"><img alt="project images" src="https://infinite-ocean-03345.herokuapp.com//images/Uploads/<%=project.mainCategory%>/<%=project.subCategory %>/<%=project.subSubCategory%>/<%=project.path[i]%>"></div>
-                    <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff1.jpg"></div>
-                <% } %>
-            </div>
-        <% } %> -->
         <div class="more_images">
             <div class="image_box"><img alt="project images" src="<%= (project.path.length > 1)? 'https://infinite-ocean-03345.herokuapp.com/images/Uploads/' + project.mainCategory + '/' + project.subCategory + '/' + project.subSubCategory + '/' + project.path[1] : '' %>"></div>
             <div class="image_box"><img alt="project images" src="<%= (project.path.length > 2)? 'https://infinite-ocean-03345.herokuapp.com/images/Uploads/' + project.mainCategory + '/' + project.subCategory + '/' + project.subSubCategory + '/' + project.path[2] : '' %>"></div>
             <div class="image_box"><img alt="project images" src="<%= (project.path.length > 3)? 'https://infinite-ocean-03345.herokuapp.com/images/Uploads/' + project.mainCategory + '/' + project.subCategory + '/' + project.subSubCategory + '/' + project.path[3] : '' %>"></div>
             <div class="image_box"><img alt="project images" src="<%= (project.path.length > 4)? 'https://infinite-ocean-03345.herokuapp.com/images/Uploads/' + project.mainCategory + '/' + project.subCategory + '/' + project.subSubCategory + '/' + project.path[4] : '' %>"></div>
-            <!-- <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff1.jpg"></div>
-            <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff10.jpg"></div>
-            <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff5.jpg"></div>
-            <div class="image_box"><img alt="project images" src="/images/Office Design Portfolio/ID_Amesco realestate office/ff7.jpg"></div> -->
-            <!-- <div class="image_box"><img alt="project images" src=""></div>
-            <div class="image_box"><img alt="project images" src=""></div> -->
+
         </div> 
-        </div>
     </div>
 
     <!-- google translate -->

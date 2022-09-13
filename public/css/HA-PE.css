@@ -153,8 +153,6 @@ body{
     font-size:large;
 }
 
-
-
 #burgerMenu{
     height: 1.5em;
     width: 2em;
@@ -236,14 +234,14 @@ body{
 }
 
 #contactSubList img{
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.85em;
+    width: 1.85em;
 }
 
 #phone{
-    margin-right: 1em; 
-    height: 1em; 
-    width: 1em;
+    margin-right: 2em; 
+    height: 1.2em; 
+    width: 1.2em;
 }
 
 #interiorSubList  li:hover, #exteriorSubList  li:hover{
@@ -325,11 +323,10 @@ body{
         top: 40%;
         width: 60%;
         transform: translateX(-1.2%);
-    
+        z-index: 1;
     }
 
     .horNavBar{
-        /* background-color: red; */
         display: flex;
         align-items: flex-end;
         flex-direction: column;
@@ -337,7 +334,8 @@ body{
         height: fit-content;
         margin: 0.5em 0.5em 0 0;
         padding: 0;
-        font-size: x-small;
+        font-size: small;
+        z-index: 99;
     }
 
     .subList{
@@ -350,28 +348,13 @@ body{
         padding: 0;
         margin: 0;
         list-style: none;
-        font-size: x-small;
+        font-size: small;
     }
-
-    /* #exterior{
-        margin: 0 0 0 1.8em;
-    }
-    #interior{
-        margin: 0 0 0 1.9em;
-    }
-
-    #exteriorSubList, #interiorSubList{
-        font-size: x-small;
-    }
-    
-    #designSubList{
-        font-size: x-small;
-    } */
 
     #exterior, #interior{
         letter-spacing: 0.2em;
         text-decoration: none;
-        font-size: x-small;
+        font-size: small;
         margin-left: 2em;
     }
     #interior{
@@ -379,13 +362,18 @@ body{
     }
     
     #exteriorSubList, #interiorSubList{
-        font-size: x-small;
-        letter-spacing: 0.1em;
+        font-size: small;
         margin-left: 1em;
     }
     
     #designSubList{
-        font-size: x-small;
+        font-size: small;
+    }
+
+    .subList > li{
+        opacity: 0;
+        visibility: hidden;
+        margin: 0.5em 0 0 0;
     }
 
     .lang{
@@ -393,20 +381,19 @@ body{
         display: flex;
         justify-content: center;
         top: 70%;
-        font-size: x-small;
+        font-size: small;
     }
 
     #contactSubList img{
-        height: 1.5em;
-        width: 1.5em;
+        height: 1.7em;
+        width: 1.7em;
     }
 
     #phone{
-        margin-right: 1em; 
-        height: 1.4em; 
-        width: 1.4em;
+        margin-right: 2em; 
+        height: 1.5em; 
+        width: 1.5em;
     }
-
 }
 
  @media screen and (min-width: 641px) and (max-width: 1007px) {
@@ -427,6 +414,7 @@ body{
         top: 40%;
         width: 50%;
         transform: translateX(-1.3%);
+        z-index: 1;
     
     }
 
@@ -439,6 +427,7 @@ body{
         margin: 0.5em 0.5em 0 0;
         padding: 0;
         font-size: medium;
+        z-index: 99;
     }
     .subList{
         display: none;
@@ -452,18 +441,6 @@ body{
         list-style: none;
         font-size: medium;
     }
-
-    /* #exterior, #interior{
-        margin: 0 0 0 3em;
-    }
-
-    #exteriorSubList, #interiorSubList{
-        font-size: medium;
-    }
-    
-    #designSubList{
-        font-size: medium;
-    } */
 
     #exterior, #interior{
         letter-spacing: 0.2em;
@@ -485,6 +462,12 @@ body{
         font-size: medium;
     }
 
+    .subList > li{
+        opacity: 0;
+        visibility: hidden;
+        margin: 0.5em 0 0 0;
+    }
+
     .lang{
         position: relative;
         display: flex;
@@ -493,7 +476,7 @@ body{
         font-size: medium;
     }
 
-    #contactSubList img{
+    /* #contactSubList img{
         height: 1em;
         width: 1em;
     }
@@ -502,6 +485,17 @@ body{
         margin-right: 1em; 
         height: 1.4em; 
         width: 1.4em;
+    } */
+
+    #contactSubList img{
+        height: 1.85em;
+        width: 1.85em;
+    }
+
+    #phone{
+        margin-right: 2em; 
+        height: 1.2em; 
+        width: 1.2em;
     }
 
 }

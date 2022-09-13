@@ -239,7 +239,7 @@ body{
 }
 
 .leftContactIcons{
-    margin-right: 2em;
+    margin-right: 1.5em;
 }
 
 #phone{
@@ -337,7 +337,7 @@ body{
         height: fit-content;
         margin: 0.5em 0.5em 0 0;
         padding: 0;
-        font-size: 0.7em;
+        font-size: small;
         z-index: 99;
     }
 
@@ -351,7 +351,7 @@ body{
         padding: 0;
         margin: 0;
         list-style: none;
-        font-size: 1em;
+        font-size: small;
     }
 
     #exterior, #interior{
@@ -360,7 +360,7 @@ body{
         font-size: 1.15em;
         margin-left: 2em;
         font-weight: 600;
-        font-style: italic;
+        /* font-style: italic; */
     }
     #interior{
         margin-top: 0.2em;
@@ -368,12 +368,12 @@ body{
     }
     
     #exteriorSubList, #interiorSubList{
-        font-size: 1em;
+        font-size: small;
         margin-left: 2.8em;
     }
     
     #designSubList{
-        font-size: 0.8em;
+        font-size: small;
     }
 
     .subList > li{
@@ -387,7 +387,7 @@ body{
         display: flex;
         justify-content: center;
         top: 70%;
-        font-size: 0.8em;
+        font-size: small;
     }
 
     #contactSubList img{
@@ -395,9 +395,13 @@ body{
         width: 1.4em;
     }
 
+    .leftContactIcons{
+        margin-right: 1.5em;
+    }
+
     #phone{
-        height: 1.2em; 
-        width: 1.2em;
+        height: 0.9em; 
+        width: 0.9em;
     }
 }
 
@@ -431,9 +435,10 @@ body{
         height: fit-content;
         margin: 0.5em 0.5em 0 0;
         padding: 0;
-        font-size: large;
+        font-size: medium;
         z-index: 99;
     }
+
     .subList{
         display: none;
         align-items: flex-end;
@@ -444,16 +449,16 @@ body{
         padding: 0;
         margin: 0;
         list-style: none;
-        font-size: large;
+        font-size: medium;
     }
 
     #exterior, #interior{
-        letter-spacing: 0.2em;
+        /* letter-spacing: 0.2em; */
         text-decoration: none;
-        font-size: large;
+        font-size: medium;
         margin-left: 3em;
         font-weight: 600;
-        font-style: italic;
+        /* font-style: italic; */
     }
     #interior{
         margin-top: 0.4em;
@@ -461,12 +466,12 @@ body{
     }
     
     #exteriorSubList, #interiorSubList{
-        font-size: large;
-        margin-left: 2em;
+        font-size: small;
+        margin-left: 3.8em;
     }
     
     #designSubList{
-        font-size: large;
+        font-size: medium;
     }
 
     .subList > li{
@@ -480,12 +485,12 @@ body{
         display: flex;
         justify-content: center;
         top: 70%;
-        font-size: large;
+        font-size: medium;
     }
 
     #contactSubList img{
-        height: 1.8em;
-        width: 1.8em;
+        height: 1.5em;
+        width: 1.5em;
     }
 
     .leftContactIcons{

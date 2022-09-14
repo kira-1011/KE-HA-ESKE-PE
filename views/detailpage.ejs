@@ -18,19 +18,21 @@
 <body>
     <div id='google_translate_element'></div>      
     <!-- top bar -->
-    <div id="topbar">
+    <div id="topbar" class="noSelect">
         <span id="pagetitle"> 
-            <a href="/" style=" display: inline; text-transform: capitalize;"><%= data.mainCategory %></a> > 
-            <a href="/" style=" display: inline; text-transform: capitalize;"><%= data.subCategory %></a>
-            <% if(data.subSubCategory != undefined) { %>
-                > <a href="" style=" display: inline; text-transform: capitalize;"><%= data.subSubCategory %></a>
-           <% } %>
+            <% if(data.mainCategory == "build") { %>
+                <a href = "/" style=" display: inline; text-transform: capitalize;">Built ups</a>
+            <% } else { %>
+                <a href="/" style=" display: inline; text-transform: capitalize;"><%= data.mainCategory%> </a> > 
+                <a href="/<%=data.mainCategory %>/<%=data.subCategory%>/<%=data.subSubCategory%>" style=" display: inline; text-transform: capitalize;"><%= data.subCategory %> </a>>
+                <a href="" style=" display: inline; text-transform: capitalize;"><%= data.subSubCategory%></a>
+            <% } %>
         </span>
         <div id="logo_container"><a href="/"><span id="logo" class="notranslate"><span id="ke" class="notranslate">ከ</span> ሀ - ፐ</span></a></div>
         <div id="b_homepage"><a href=""><span class="material-symbols-outlined notranslate">arrow_back</span>  Back to previous Page</a></div>
     </div>
         <% if (projects.length == 1){ %>
-            <div id="image_container"> 
+            <div id="image_container" class="noSelect"> 
                 <div class="wrapper">
                     <div class="image_div" style="background-image: url('https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[0].mainCategory%>/<%=projects[0].subCategory%>/<%=projects[0].subSubCategory%>/<%=projects[0].path[0]%>');" data-id="<%= projects[0].id %>"></div>
                     <div class="ulcontainer">
@@ -46,7 +48,7 @@
 
         <% } else { %>
 
-            <div id="image_container"> 
+            <div id="image_container" class="noSelect"> 
                 <% for( let i = 0; i < projects.length; i++ ) { %>
                 
                     <div class="wrapper">
@@ -63,6 +65,7 @@
                 <% } %>
             </div>
         <% } %>
+
     
     <!-- js script code-->
     <script src="/js/detailpage.js"></script>

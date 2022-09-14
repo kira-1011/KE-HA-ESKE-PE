@@ -53,8 +53,8 @@ main.addEventListener('click', function(event) {
     }
 });
 
-window.onbeforeunload = () => {
-    hideAll();
-    iconClicked = false;
-};
+// window.onbeforeunload = () => {
+//     hideAll();
+//     iconClicked = false;
+// };
 

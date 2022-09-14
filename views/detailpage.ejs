@@ -20,11 +20,13 @@
     <!-- top bar -->
     <div id="topbar">
         <span id="pagetitle"> 
-            <a href="/" style=" display: inline; text-transform: capitalize;"><%= data.mainCategory %></a> > 
-            <a href="/" style=" display: inline; text-transform: capitalize;"><%= data.subCategory %></a>
-            <% if(data.subSubCategory != undefined) { %>
-                > <a href="" style=" display: inline; text-transform: capitalize;"><%= data.subSubCategory %></a>
-           <% } %>
+            <% if(data.mainCategory == "build") { %>
+                <a href = "/" style=" display: inline; text-transform: capitalize;">Built ups</a>
+            <% } else { %>
+                <a href="/" style=" display: inline; text-transform: capitalize;"><%= data.mainCategory%> </a> > 
+                <a href="/<%=data.mainCategory %>/<%=data.subCategory%>/<%=data.subSubCategory%>" style=" display: inline; text-transform: capitalize;"><%= data.subCategory %> </a>>
+                <a href="" style=" display: inline; text-transform: capitalize;"><%= data.subSubCategory%></a>
+            <% } %>
         </span>
         <div id="logo_container"><a href="/"><span id="logo" class="notranslate"><span id="ke" class="notranslate">ከ</span> ሀ - ፐ</span></a></div>
         <div id="b_homepage"><a href="/"><span class="material-symbols-outlined notranslate">arrow_back</span>  Back to Home Page</a></div>

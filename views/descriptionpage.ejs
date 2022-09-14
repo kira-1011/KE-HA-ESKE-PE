@@ -25,7 +25,7 @@
     <div class="image_container">
         <span class="category_link">
             <% if(project.mainCategory == "build") { %>
-                <a href = "/" style=" display: inline; text-transform: capitalize;"><%= project.mainCategory%> </a>
+                <a href = "/" style=" display: inline; text-transform: capitalize;">Built ups</a>
             <% } else { %>
                 <a href="/" style=" display: inline; text-transform: capitalize;"><%= project.mainCategory%> </a> > 
                 <a href="/<%=project.mainCategory %>/<%=project.subCategory%>/<%=project.subSubCategory%>" style=" display: inline; text-transform: capitalize;"><%= project.subCategory %> </a>>

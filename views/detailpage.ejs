@@ -24,8 +24,10 @@
                 <a href = "/" style=" display: inline; text-transform: capitalize;">Built ups</a>
             <% } else { %>
                 <a href="/" style=" display: inline; text-transform: capitalize;"><%= data.mainCategory%> </a> > 
-                <a href="/<%=data.mainCategory %>/<%=data.subCategory%>/<%=data.subSubCategory%>" style=" display: inline; text-transform: capitalize;"><%= data.subCategory %> </a>>
-                <a href="" style=" display: inline; text-transform: capitalize;"><%= data.subSubCategory%></a>
+                <a href="/<%=data.mainCategory %>/<%=data.subCategory%>/<%=data.subSubCategory%>" style=" display: inline; text-transform: capitalize;"><%= data.subCategory %> </a>
+                <% if( data.subSubCategory != undefined) {%>
+                    ><a href="" style=" display: inline; text-transform: capitalize;"><%= data.subSubCategory%></a>
+                <% } %>
             <% } %>
         </span>
         <div id="logo_container"><a href="/"><span id="logo" class="notranslate"><span id="ke" class="notranslate">ከ</span> ሀ - ፐ</span></a></div>
@@ -47,10 +49,8 @@
             </div>
 
         <% } else { %>
-
             <div id="image_container" class="noSelect"> 
-                <% for( let i = 0; i < projects.length; i++ ) { %>
-                
+                <% for( let i = 0; i < projects.length; i++) { %>
                     <div class="wrapper">
                         <div class="image_div" style="background-image: url('https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>');" data-id="<%= projects[i].id %>"></div>
                         <div class="ulcontainer">

@@ -100,12 +100,19 @@ p, .location_name, .mail_name, .phone_number
     margin-top: 1em;
 }
 
-.Adress a, .location a 
+.Adress a, .location a, .Address a:link, .Adress a:visited
 {
-    color: blue;
+    /* color: blue; */
+    color: white;
+}
+
+.Address span, .location span
+{
+    color: white;
 }
 
 .location_icon, .mail_icon, .phone_icon {
+    color: white;
     scale: 1.3;
   font-variation-settings:
   'FILL' 0,

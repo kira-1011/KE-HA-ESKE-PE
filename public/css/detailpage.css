@@ -6,6 +6,7 @@
 html
 {
     height: 100%;
+    width: 100%;
 }
 
 body
@@ -14,8 +15,7 @@ body
     font-family: 'Architects Daughter';
     font-weight:bold;
     height: 100%;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 /* Disable blue highlighting on mobile screens when tapped */
@@ -99,18 +99,17 @@ body
 }
 
 /* display images  */
-
-
 #image_container
 {
     display: flex;
     flex-wrap: wrap;
     align-items:baseline;  
-    justify-content:center;
+    justify-content: center;
     gap: 8em;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
     margin-top: 7em;
+    width: 100%;
 }
 
 #image_container .wrapper
@@ -236,8 +235,13 @@ body
 
     #image_container .image_div
     {
-        width: inherit;
+        width: 100%;
     } 
+
+    #image_container .wrapper
+    {
+        width: 68%;
+    }
 }
 
 @media screen and (max-width: 414px)
@@ -247,4 +251,10 @@ body
         /* font-size:small; */
         font-size: 0.5em;
     }
+
+    #topbar
+    {
+        height: 5%;
+    }
+
 }

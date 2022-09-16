@@ -18,3 +18,14 @@ document.querySelectorAll('.b_homepage_link').forEach(item => {
         item.setAttribute('href', document.referrer);
     })
   })
+
+  //make the other images selectable and swap it with the main image
+  let main_image = document.getElementsByClassName("image")[0];
+
+  document.querySelectorAll('.image_box img').forEach(item => {
+    item.addEventListener('click', event => {
+        let temp = item.getAttribute('src');
+        item.setAttribute('src', main_image.getAttribute('src'));
+        main_image.setAttribute('src', temp);
+    })
+  })

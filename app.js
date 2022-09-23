@@ -79,7 +79,8 @@ app.get("/:mainCategory/:subCategory/:subSubCategory", (req, res) => {
 
         if(projects.length > 0)
         { 
-            res.render("detailpage", {projects, data});
+            const url = req.url;
+            res.render("detailpage", {projects, data, url});
         }
            
         else

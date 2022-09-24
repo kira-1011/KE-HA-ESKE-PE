@@ -227,8 +227,7 @@ body{
     padding: 0;
     margin: 0;
     list-style: none;
-    font-size:large;
-  
+    font-size:large; 
 }
 
 .subList > li{

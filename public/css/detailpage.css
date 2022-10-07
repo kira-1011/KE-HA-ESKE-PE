@@ -149,7 +149,7 @@ body
 
 #image_container .image_div
 {
-    background-color: white;
+    /* background-color: white; */
     background-size: cover;
     background-position: center;
     width: 100%;

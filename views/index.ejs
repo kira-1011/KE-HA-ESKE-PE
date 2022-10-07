@@ -188,7 +188,7 @@
         localStorage.setItem("amhClicked", "true");
         jQuery(".goog-te-combo").val("am");
         // window.location = "#googtrans(en|am)";
-        window.history.replaceState(null, "", "http://localhost:3000/#googtrans(en|am)");
+        window.history.replaceState(null, "", "/#googtrans(en|am)");
         location.reload();        
       });
 
@@ -196,7 +196,7 @@
         localStorage.setItem("amhClicked", "false");
         jQuery(".goog-te-combo").val("en");
         // window.location = "#googtrans(en|en)";
-        window.history.replaceState(null, "", "http://localhost:3000/#googtrans(en|en)");
+        window.history.replaceState(null, "", "/#googtrans(en|en)");
         location.reload();
         // loading();
       });

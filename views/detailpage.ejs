@@ -10,12 +10,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.cdnfonts.com/css/architects-draft" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
-    <!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>  -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
     <link rel="stylesheet" href="/css/googleTranslate.css">
     <link rel="stylesheet" href="/css/detailpage.css">
     <title>KE HA ESKE PE</title>
+    <!--  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/bgset/ls.bgset.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js"></script>
+
+
 </head>
 <body>
+    <!-- initalize lazy script -->
+    <script>
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        lazySizesConfig.loadMode = 2;
+    </script>
+
     <!-- <div id='google_translate_element'></div>       -->
     <!-- top bar -->
     <div id="topbar" class="noSelect">
@@ -60,13 +72,20 @@
                         <% } %> 
 
                     <div class="wrapper">
-                        <div class="image_div" style="background-image: url('https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>');" data-id="<%= projects[i].id %>"></div>
+                        <!-- preload the first 6 images -->
+                        <!-- <div class="image_div" style="background-image: url('https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>');" data-id="<%= projects[i].id %>"></div> -->
+                        <% if(i >= 0 && i < projects.length && i <= 5) { %>
+                            <div class="image_div lazypreload lazyload" data-bg="https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>" data-id="<%= projects[i].id %>"></div>
+                        <% } else { %>
+                            <div class="image_div lazyload" data-bg="https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>" data-id="<%= projects[i].id %>"></div>
+                        <% } %>
+
                         <div class="ulcontainer">
                             <ul class="description_list">
                                 <li>Project name: <%= projects[i].name %> </li>
                                 <li>Project area: <%= projects[i].area %> </li>
-                                <li>Project location:  <%= projects[i].location %></li>
-                                <li>Project cost:  <%= projects[i].cost %></li>
+                                <li>Project location: <%= projects[i].location %></li>
+                                <li>Project cost: <%= projects[i].cost %></li>
                             </ul>
                         </div>
                     </div>
@@ -74,7 +93,7 @@
             </div>
         <% } %>
 
-    
+
     <!-- js script code-->
     <script src="/js/detailpage.js"></script>
     
@@ -85,13 +104,6 @@
             autoDisplay: false,
             multilanguagePage: true, layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
         }
-
-//     window.onload = ()=>{
-//         document.body.parentNode.style.visibility = "hidden";
-//         setTimeout(()=>{
-//             document.body.parentNode.style.visibility="visible";   
-//         }, 1300);
-// };
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="/js/languageChange.js"></script>

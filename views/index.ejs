@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KE HA ESKE PE</title>
     <link href="/css/HA-PE.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/loading.css">
     <link rel="stylesheet" href="/css/googleTranslate.css" />
     <link href="https://fonts.googleapis.com/css?family=Architects Daughter" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/architects-draft" rel="stylesheet">
@@ -16,6 +17,9 @@
   </head>
   <body>
     <div id="google_translate_element"></div>
+    
+    <!-- loading gif -->
+    <div class="se-pre-con"></div>
 
     <div id="main">
       <div class="navContainer">
@@ -228,7 +232,6 @@
         if(event.persisted)
         {
           location.reload();
-          // alert('page is already loaded');
         }
       });
 
@@ -236,56 +239,8 @@
     <script
       type="text/javascript"
       src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- loading js -->
+    <script src="/js/loading.js"></script>
   </body>
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="loadingText" style="visibility: hidden;">Loading...</div>
-    <button id="loadButton">LoadPage</button>
-
-    <div id="content"></div>
-    <script>
-        function load(url) {
-            // display loading image here...
-            document.getElementById('loadingText').style.visibility = "visible";
-            // request your data...
-            var req = new XMLHttpRequest();
-            req.open("GET", url, true);
-
-            req.onreadystatechange = function () {
-                if (req.readyState == 4 && req.status == 200) {
-                    // content is loaded...hide the gif and display the content...
-
-                    if (req.responseText) {
-                        // document.getElementById('content').insertAdjacentHTML("afterbegin",req.responseText);
-                        // document.getElementById('content').innerHTML = req.responseText;
-                        document.body.parentNode.innerHTML = req.responseText;
-                        // document.getElementById('loadingText').style.visibility = "hidden";
-                    }
-                }
-            };
-            req.send(null);
-        }
-
-        document.getElementById('loadButton').addEventListener('click', ()=>{
-            load('http://localhost:3000/design/exterior/residential');
-            // load('https://immense-brook-60574.herokuapp.com/');
-            // window.location.href += 'design/exterior/residential';
-            // window.history.pushState(null, "", window.location.href += 'design/exterior/residential');
-        });
-
-        window.onload = ()=>{
-          console.log("ss");
-        };
-    </script>
-</body>
-</html> -->

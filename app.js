@@ -40,12 +40,14 @@ app.get("/build", (req, res) => {
         mainCategory: "build", 
         subCategory: "", 
         subSubCategory: ""};
+    
+    const url = req.url;
 
     Project.find(data).sort({createdAt: -1})
     .then((projects) => {
 
         if(projects.length > 0)
-            res.render("detailpage", {projects, data});
+            res.render("detailpage", {projects, data,url});
         else
             res.status(404).render("404");
     })

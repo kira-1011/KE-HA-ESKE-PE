@@ -34,13 +34,17 @@
     <div class="aboutus_container">
         <h1>About Us</h1>
         <h2 class="notranslate"><span id="ke" class="notranslate">ከ</span> ሀ - ፐ</h2>
-        <!-- <p>Our company has spent 5 years working on design and construction projects. Its is comprised of multidisciplinary professionals that are necessary for the job. As the name of the company discribes our moto is performing a task from its very initial step which is designing the exterior up to the very completion of it which will be furnishing and decoration of the interior space.
-            Ke Ha eske Pe is a place where multidisicplinary professionals are happy to work, collaborate and come up with creative ideas.</p> -->
-            <p>
+            <p id="about_en">
                 Our company has spent 5 years working on design and construction projects. Its is comprised of multidisciplinary 
-                professionals that are necessary for the job. As the name of the company describes our moto is performing a task from its very 
+                professionals that are necessary for the job. As the name of the company describes our motto is performing a task from its very 
                 initial up to the very completion of it, which is designing the exterior up to furnishing the interior space. 
                 Ke Ha eske Pe is a place where multidisciplinary professionals are happy to work, collaborate and come up with creative ideas.
+            </p>
+
+            <p id="about_am">
+                ድርጅታችን በዲዛይንና በግንባታ ፕሮጀክቶች ላይ 5 ዓመታትን አሳልፏል። ለስራው አስፈላጊ የሆኑ ሁለገብ ባለሙያዎችን ያቀፈ ነው። 
+                የኩባንያው ስም እንደሚገልጸው መሪ ቃላችን ከመጀመሪያው ጀምሮ እስከ ማጠናቀቂያው ድረስ ያለውን ተግባር ማከናወን ሲሆን ይህም ማለት 
+                የውጪውን ዲዛይን መስራት እስከ ውስጣዊ ክፍልን ማሟላት ነው። ከ ሀ - ፐ ሁለገብ ባለሙያዎች ደስተኛ ሆነው ሚሰሩበት፣ ሚተባበሩበት እና የፈጠራ ሀሳቦችን የሚያመነጩበት ቦታ ነው።
             </p>
                 <div class="Address">
                 <span class="Address_title">Address:</span><br>
@@ -64,6 +68,21 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="/js/languageChange.js"></script>
+
+    <!-- change content to amh, if lang is amharic -->
+    <script>
+        if(localStorage.getItem('amhClicked') === 'true')
+        {
+            document.getElementById('about_en').style.display = "none";
+            document.getElementById('about_am').style.display = "block";
+        }
+        else
+        {
+            document.getElementById('about_en').style.display = "block";
+            document.getElementById('about_am').style.display = "none";
+        }
+            
+    </script>
 
     <!-- loading js -->
     <script src="/js/loading.js"></script>

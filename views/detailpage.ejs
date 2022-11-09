@@ -40,7 +40,7 @@
                 <a href="/" style=" display: inline; text-transform: capitalize;"><%= data.mainCategory%> </a> > 
                 <a href="/<%=data.mainCategory %>/<%=data.subCategory%>/<%=data.subSubCategory%>" style=" display: inline; text-transform: capitalize;"><%= data.subCategory %> </a>
                 <% if( data.subSubCategory != undefined) {%>
-                    ><a href="" style=" display: inline; text-transform: capitalize;"><%= data.subSubCategory%></a>
+                    > <a href="" style=" display: inline; text-transform: capitalize;"><%= data.subSubCategory%></a>
                 <% } %>
             <% } %>
         </span>
@@ -54,7 +54,7 @@
                     <div class="ulcontainer">
                         <ul class="description_list">
                             <li>Project name: <%= projects[0].name %> </li>
-                            <li>Project area: <%= projects[0].area %> </li>
+                            <li><span class="projectarea notranslate">Project area: </span> <%= projects[0].area %> </li>
                             <li>Project location:  <%= projects[0].location %></li>
                             <li>Project cost:  <%= projects[0].cost %></li>
                         </ul>
@@ -85,7 +85,7 @@
                         <div class="ulcontainer">
                             <ul class="description_list">
                                 <li>Project name: <%= projects[i].name %> </li>
-                                <li>Project area: <%= projects[i].area %> </li>
+                                <li><span class="projectarea notranslate">Project area: </span> <%= projects[i].area %> </li>
                                 <li>Project location: <%= projects[i].location %></li>
                                 <li>Project cost: <%= projects[i].cost %></li>
                             </ul>
@@ -94,7 +94,7 @@
                 <% } %>
             </div>
         <% } %>
-
+        <!-- <div style="background-color: red; height: 8em; width: 50%;"></div> -->
 
     <!-- js script code-->
     <script src="/js/detailpage.js"></script>

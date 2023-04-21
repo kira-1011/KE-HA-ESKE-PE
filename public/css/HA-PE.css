@@ -51,7 +51,7 @@ body{
 #main{
     margin: 0;
     padding: 0;
-    background-image: url("https://immense-brook-60574.herokuapp.com/images/wp10820040-half-black-half-white-wallpapers.jpg");
+    background-image: url("/images/wp10820040-half-black-half-white-wallpapers.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;

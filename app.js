@@ -10,6 +10,7 @@ app.use(cors());
 
 app.use(express.static(__dirname + "/public"));
 
+app.set('views', './views');
 app.set("view engine", "ejs");
 
 const dbUrl = "mongodb+srv://Kira:kiraatmongoose@ke-ha-eske-pe.0acsf3c.mongodb.net/KE-HA-ESKE-PE?retryWrites=true&w=majority";

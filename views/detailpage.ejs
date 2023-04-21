@@ -75,11 +75,11 @@
 
                     <div class="wrapper">
                         <!-- preload the first 6 images -->
-                        <!-- <div class="image_div" style="background-image: url('https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>');" data-id="<%= projects[i].id %>"></div> -->
+                        <!-- <div class="image_div" style="background-image: url('/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>');" data-id="<%= projects[i].id %>"></div> -->
                         <% if(i >= 0 && i < projects.length && i <= 5) { %>
-                            <div class="image_div lazypreload lazyload" data-bg="https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>" data-id="<%= projects[i].id %>"></div>
+                            <div class="image_div lazypreload lazyload" data-bg="/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>" data-id="<%= projects[i].id %>"></div>
                         <% } else { %>
-                            <div class="image_div lazyload" data-bg="https://infinite-ocean-03345.herokuapp.com/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>" data-id="<%= projects[i].id %>"></div>
+                            <div class="image_div lazyload" data-bg="/images/Uploads/<%=projects[i].mainCategory%>/<%=projects[i].subCategory%>/<%=projects[i].subSubCategory %>/<%=projects[i].path[0]%>" data-id="<%= projects[i].id %>"></div>
                         <% } %>
 
                         <div class="ulcontainer">

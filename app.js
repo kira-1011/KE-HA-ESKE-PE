@@ -26,7 +26,7 @@ mongoose.connect(dbUrl)
 
 
 //Routes
-app.get("/k", (req, res) => {
+app.get("/", (req, res) => {
    res.render("index");
 });
 
